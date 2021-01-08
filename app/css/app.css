@@ -1,0 +1,257 @@
+/**
+Set box-sizing to border-box for all elements by default. This makes it
+easier to ensure widths when adding padding and borders. */
+
+html {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    /* disable text highlighting as suggested by sindresorhus */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-size: 1em;
+    line-height: 1.4
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    margin: -15px 0 0 10px;
+    font-size: 17px;
+    color: #77b4e8;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -20px;
+    padding: 0;
+    margin-top: -20px;
+}
+
+li:first-child {
+    border-top: none;
+    margin-top: -10px;
+}
+
+li {
+    float: left;
+    margin: 0;
+    padding: 26px 50px;
+    text-align: center;
+    border-top: 1px solid #000;
+}
+
+.player input {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    vertical-align: middle;
+    line-height: normal
+}
+
+.player input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+    height: 13px;
+    width: 13px
+}
+
+.player input[type="range"] {
+    float: left;
+    width: 155px;
+    margin: 5px 0 0 20px;
+}
+
+.player input[type="checkbox"] {
+    display: none;
+}
+
+.player input[type="checkbox"]:checked+label {
+    background-position: 0 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.player input[type="checkbox"]:checked+label span {
+    left: 30px;
+}
+
+.clear {
+    clear: both
+}
+
+.container {
+    background-color: #373a47;
+    text-align: center;
+    border: 1px solid #202020;
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, .1), 0 3px 5px rgba(0, 0, 0, .1)
+}
+
+.player label {
+    color: transparent;
+    border-radius: 14px;
+    border: 2px solid #f2f2f2;
+    display: block;
+    position: relative;
+    text-indent: 100%;
+    width: 56px;
+    height: 26px;
+    -webkit-transition: background-position .3s ease;
+    cursor: pointer;
+    font-size: .01em;
+    float: left;
+}
+
+.player label span {
+    background: #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 23px;
+    height: 23px;
+    -webkit-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    transition: all .2s ease;
+    border: 4px solid #f2f2f2;
+    border-radius: 2em;
+}
+
+audio {
+    display: inline-block;
+    display: inline;
+    zoom: 1
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+.arrow {
+    position: fixed;
+    padding: 12px 0;
+    background: transparent;
+}
+
+.arrow:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-width: 0 8px 12px 8px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close {
+    background: transparent url('../img/close.png') no-repeat 4px 4px;
+    background-size: 24px 24px;
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    position: fixed;
+    right: 6px;
+    text-indent: -10000px;
+    top: 16px;
+    width: 32px;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+#mute-button {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-left: -15px;
+    cursor: pointer;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.on {
+    background-image: url('../img/mute.png');
+    background-size: cover;
+}
+
+.off {
+    background-image: url('../img/unmute.png');
+    background-size: cover;
+}
+
+.control-section {
+    background: #fff;
+    margin-bottom: 25px;
+}
+
+.cafe {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/cafe.jpg");
+    background-position: center;
+}
+
+.rain {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/rain.jpg')
+}
+
+.fire {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/fire.jpg");
+    background-position: center;
+}
+
+.drops {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/drops.jpg");
+    background-position: center;
+}
+
+.night {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/night.jpeg");
+    background-position: center;
+}
+
+.player-section {
+    display: block;
+    width: 320px;
+}

@@ -1,0 +1,93 @@
+{
+  "name": "foco",
+  "version": "1.7.0",
+  "productName": "Foco",
+  "description": "Stay focused with Foco and boosts productivity 🚀 by creating perfect productive environment.",
+  "author": "Akash Nimare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akashnimare/foco"
+  },
+  "bugs": {
+    "url": "https://github.com/akashnimare/foco/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "test": "standard",
+    "start": "yarn install && electron ./app",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "clean": "rm -Rf node_modules && rm -Rf ./dist"
+  },
+  "build": {
+    "appId": "app.foco",
+    "asar": true,
+    "files": [
+      "**/*"
+    ],
+    "copyright": "Akash Nimare",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "identity": null
+    },
+    "linux": {
+      "category": "",
+      "packageCategory": "GNOME;GTK;MUSIC;PRODUCTIVITY",
+      "description": "Stay focused with Foco",
+      "target": [
+        "deb",
+        "zip",
+        "AppImage"
+      ],
+      "maintainer": "Akash Nimare <svnitakash@gmail.com>"
+    },
+    "deb": {
+      "synopsis": "Foco Desktop App"
+    },
+    "dmg": {
+      "icon": "build/icon.icns",
+      "iconSize": 128,
+      "contents": [
+        {
+          "x": 380,
+          "y": 240,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 122,
+          "y": 240,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "perMachine": true,
+      "oneClick": false
+    }
+  },
+  "keywords": [
+    "electron",
+    "productivity",
+    "focus",
+    "menubar",
+    "menu",
+    "mac",
+    "app"
+  ],
+  "homepage": "http://akashnimare.in",
+  "dependencies": {
+    "menubar": "5.2.3"
+  },
+  "devDependencies": {
+    "electron-builder": "20.8.1",
+    "electron": "1.8.4",
+    "standard": "*"
+  }
+}

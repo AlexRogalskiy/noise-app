@@ -1,0 +1,118 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Oracle\product\12.1.0\client_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Bitvise SSH Client;C:\Users\AVROGAL1\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files\Kubernetes\Minikube;C:\Go\bin;C:\progs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git LFS;C:\Program Files (x86)\scala\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\maven\apache-maven-3.6.3\bin;C:\gradle\gradle-6.7.1\bin;C:\Users\AVROGAL1\scoop\shims;C:\Users\AVROGAL1\AppData\Local\Microsoft\WindowsApps;C:\Users\AVROGAL1\AppData\Local\atom\bin;C:\Mercurial;C:\Users\AVROGAL1\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\WebStorm 2020.3\bin;;C:\Users\AVROGAL1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Multipass\bin;C:\Program Files\MicroK8s;C:\Users\AVROGAL1\go\bin;C:\Program Files\JetBrains\DataGrip 2020.3\bin;;C:\Users\AVROGAL1\AppData\Local\.meteor;
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.5.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\AVROGAL1\AppData\Local\Yarn\Cache\v6\npm-app-builder-bin-1.7.2-daf67060a6bad8f5f611a0d2876d9db897a83f06-integrity\node_modules\app-builder-bin'
+
+npm manifest: 
+  {
+    "name": "foco",
+    "version": "1.7.0",
+    "productName": "Foco",
+    "description": "Stay focused with Foco and boosts productivity 🚀 by creating perfect productive environment.",
+    "author": "Akash Nimare",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/akashnimare/foco"
+    },
+    "bugs": {
+      "url": "https://github.com/akashnimare/foco/issues"
+    },
+    "main": "index.js",
+    "scripts": {
+      "postinstall": "electron-builder install-app-deps",
+      "test": "standard",
+      "start": "yarn install && electron ./app",
+      "pack": "electron-builder --dir",
+      "dist": "electron-builder",
+      "clean": "rm -Rf node_modules && rm -Rf ./dist"
+    },
+    "build": {
+      "appId": "app.foco",
+      "asar": true,
+      "files": [
+        "**/*"
+      ],
+      "copyright": "Akash Nimare",
+      "mac": {
+        "category": "public.app-category.productivity",
+        "identity": null
+      },
+      "linux": {
+        "category": "",
+        "packageCategory": "GNOME;GTK;MUSIC;PRODUCTIVITY",
+        "description": "Stay focused with Foco",
+        "target": [
+          "deb",
+          "zip",
+          "AppImage"
+        ],
+        "maintainer": "Akash Nimare <svnitakash@gmail.com>"
+      },
+      "deb": {
+        "synopsis": "Foco Desktop App"
+      },
+      "dmg": {
+        "icon": "build/icon.icns",
+        "iconSize": 128,
+        "contents": [
+          {
+            "x": 380,
+            "y": 240,
+            "type": "link",
+            "path": "/Applications"
+          },
+          {
+            "x": 122,
+            "y": 240,
+            "type": "file"
+          }
+        ]
+      },
+      "win": {
+        "target": "nsis",
+        "icon": "build/icon.ico"
+      },
+      "nsis": {
+        "perMachine": true,
+        "oneClick": false
+      }
+    },
+    "keywords": [
+      "electron",
+      "productivity",
+      "focus",
+      "menubar",
+      "menu",
+      "mac",
+      "app"
+    ],
+    "homepage": "http://akashnimare.in",
+    "dependencies": {
+      "menubar": "5.2.3"
+    },
+    "devDependencies": {
+      "electron-builder": "20.8.1",
+      "electron": "1.8.4",
+      "standard": "*"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
